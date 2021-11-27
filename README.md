@@ -53,7 +53,9 @@ Due to time constraints, these two modules we did not implement from scratch. Th
 
 ### Results
 
-At a clock rate of 100MHz and 115200 baud rate, we read approximately 1.4mb of binary output using the TeraTerm software available in the labs. The output needs to be slightly more than 1mb as the official [NIST 800-22](https://csrc.nist.gov/Projects/Random-Bit-Generation/Documentation-and-Software) test suite can only produce a comprehensive enough test result when the input is 10 bitstreams of 1000000 bits (total 1.25mb). We have verified that Wold, Tan's design with 50 3-stage ROs does pass all the NIST test suite with the exception of "randomexcursion" algorithm tests, since those require an input bitstream of more than 100mb. 
+At a clock rate of 100MHz and 115200 baud rate, we read approximately 1.4mb of binary output using the TeraTerm software available in the labs. The binary file can be found in the [sample_bitstream_output](sample_bitstream_output/) folder.
+
+The output needs to be slightly more than 1mb as the official [NIST 800-22](https://csrc.nist.gov/Projects/Random-Bit-Generation/Documentation-and-Software) test suite can only produce a comprehensive enough test result when the input is 10 bitstreams of 1000000 bits (total 1.25mb). We have verified that Wold, Tan's design with 50 3-stage ROs does pass all the NIST test suite with the exception of "randomexcursion" algorithm tests, since those require an input bitstream of more than 100mb. 
 
 The complete result can be found in the [NIST folder](NIST/nist_800_22_results/), summarised in the [finalAnalysisReport](NIST/nist_800_22_results/finalAnalysisReport.txt).
 
