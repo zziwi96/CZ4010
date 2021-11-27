@@ -1,4 +1,4 @@
-# CZ4010
+# CZ4010 - Applied Cryptography / Course Project / Topic #9: Hardware Implementation of Randomness
 ### Hardware Implementation of a True Random Number Generator
 
 ### Overview
