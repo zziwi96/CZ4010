@@ -3,11 +3,13 @@
 
 ### Overview
 
-This project aims to implement a cryptographically secure hardware random number generator by following one of the most cited TRNG design by Wold, Tan, in ["Analysis and Enhancement of Random Number Generator in FPGA Based on Oscillator Rings".](https://www.hindawi.com/journals/ijrc/2009/501672/) The inherent jitter within the ring oscillator (RO) structure provides the source of entropy. The degree of randomness can be further improved by creating multiple ROs and connecting their output to an XOR-tree, where an output bit will be sampled at each clock cycle.
+This project aims to implement a cryptographically secure hardware random number generator by following one of the most cited TRNG design by Wold, Tan, in ["Analysis and Enhancement of Random Number Generator in FPGA Based on Oscillator Rings".](https://www.hindawi.com/journals/ijrc/2009/501672/) We would like to verify whether this design can be implemented on an entry level FPGA board while producing an output bitstream that passes the NIST 800-22 randomness test suite. 
 
-The design is done on Verilog, synthesised and implemented using Vivado on an entry level Basys3 FPGA board. We have provided all the source file and constraint file in this repository. No test bench was included since the output of RO structures in Vivado's simulator is constantly undefined (X).
+According to Wold, Tan's design, inherent jitter within the ring oscillator (RO) structure provides the source of entropy. The degree of randomness that follows can be further improved by creating multiple ROs and connecting their output to an XOR-tree, where an output bit will be sampled at each clock cycle.
 
-If you'd like to verify the design, please make sure to import the Basys 3 board file into Vivado by copying it to the installation folder. The board file is also included in the repository.
+The design is done on Verilog, synthesised and implemented using Vivado on an entry level Basys3 FPGA board. We have provided all the [source files](hdl_src/) and [constraint file](hdl_constraints/) in this repository. No test bench was included since the output of RO structures in Vivado's simulator is constantly undefined (X).
+
+If you'd like to verify the design, please make sure to install the Basys 3 board file into Vivado by copying it to the installation folder. The board file is also included in the repository.
 
 ### Design
 
